@@ -38,6 +38,6 @@ def update_user(username: str, user: User):
 
 @app.delete('/{username}')
 def delete_user(username: str):
-    success = db.delete_one(username)
+    success = db.delete_user(username)
     
     return { 'data': success, 'status_code': 200 }
